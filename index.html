@@ -9,9 +9,25 @@
     <link href="./assets/css/fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
 
 
+    <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css">
+    <script src="./node_modules/codemirror/mode/javascript/javascript.js"></script>
+
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h1>Hello World</h1>
+    </div>
+    <div id="codemirr" style="height: 200px; width: 200px; background: #888888; color: #1a1a1a;"></div>
     <script type="module" src="/src/main.ts"></script>
+
+
+    <script>
+      var myCodeMirror = CodeMirror(document.getElementById('codemirr'),  {
+        value: "function myScript(){return 100;}\n",
+        mode:  "javascript"
+      });
+    </script>
+
   </body>
 </html>
