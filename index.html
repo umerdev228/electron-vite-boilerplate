@@ -9,9 +9,13 @@
     <link href="./assets/css/fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
 
 
-    <script src="./node_modules/codemirror/lib/codemirror.js"></script>
     <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="./node_modules/codemirror/addon/scroll/simplescrollbars.css">
+
+    <script src="./node_modules/codemirror/lib/codemirror.js"></script>
     <script src="./node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="./node_modules/codemirror/addon/scroll/annotatescrollbar.js"></script>
+    <script src="./node_modules/codemirror/addon/scroll/simplescrollbars.js"></script>
 
   </head>
   <body>
@@ -23,10 +27,47 @@
 
 
     <script>
-      var myCodeMirror = CodeMirror(document.getElementById('codemirr'),  {
-        value: "function myScript(){return 100;}\n",
-        mode:  "javascript"
+      let myCodeMirror = CodeMirror(document.getElementById('codemirr'),  {
+        value: "This is a piece of text that creates scrollbars\n" +
+                "\n" +
+                "Lorem ipsum dolor sit amet, turpis nec facilisis neque vestibulum adipiscing, magna nunc est luctus orci a,\n" +
+                "aliquam duis ad volutpat nostra. Vestibulum ultricies suspendisse commodo volutpat pede sed. Bibendum odio\n" +
+                "dignissim, ad vitae mollis ac sed nibh quis, suspendisse diam, risus quas blandit phasellus luctus nec,\n" +
+                "integer nunc vitae posuere scelerisque. Lobortis quam porta conubia nulla. Et nisl ac, imperdiet vitae ac.\n" +
+                "Parturient sit. Et vestibulum euismod, rutrum nunc libero mauris purus convallis. Cum id adipiscing et eget\n" +
+                "pretium rutrum, ultrices sapien magnis fringilla sit lorem, eu vitae scelerisque ipsum aliquet, magna sed\n" +
+                "fusce vel.\n" +
+                "\n" +
+                "Lectus ultricies libero dolor convallis, sed etiam vel hendrerit egestas viverra, at urna mauris, eget\n" +
+                "vulputate dolor voluptatem, nulla eget sollicitudin. Sed tincidunt, elit sociis. Mattis mi tortor dui id\n" +
+                "sodales mi, maecenas nam fringilla risus turpis mauris praesent, imperdiet maecenas ultrices nonummy tellus\n" +
+                "quis est. Scelerisque nec pharetra quis varius fringilla. Varius vestibulum non dictum pharetra, tincidunt in\n" +
+                "vestibulum iaculis molestie, id condimentum blandit elit urna magna pulvinar, quam suspendisse pellentesque\n" +
+                "donec. Vel amet ad ac. Nec aut viverra, morbi mi neque massa, turpis enim proin. Tellus eu, fermentum velit\n" +
+                "est convallis aliquam velit, rutrum in diam lacus, praesent tempor pellentesque dictum semper augue. Felis\n" +
+                "explicabo massa amet lectus phasellus dolor. Ut lorem quis arcu neque felis ultricies, senectus vitae\n" +
+                "curabitur sed pellentesque et, id sed risus in sed ac accumsan, blandit arcu quam duis nunc.\n" +
+                "\n" +
+                "Sed leo sollicitudin odio vitae, purus sit egestas, justo eros inceptos auctor fermentum lectus. Ligula luctus\n" +
+                "turpis, quod massa vitae elementum orci, nullam fringilla elit tortor. Justo ante tempor amet quam posuere\n" +
+                "volutpat. Facilisis pede erat ut hac ultrices ipsum, wisi duis sit metus. Dolor vitae est sed sed vitae. Sed\n" +
+                "eu ligula, morbi vestibulum nunc nibh velit ut taciti, ligula elit semper sagittis in, auctor arcu vel eget.\n" +
+                "Mauris at vitae nec suspendisse et, aenean proin blandit suscipit. Morbi quam, dolor ultricies. Viverra\n" +
+                "tempus. Suspendisse sit dapibus, ac fuga aenean, magna nisl nonummy augue posuere, dictum ut fuga velit\n" +
+                "parturient augue interdum, mattis sit tellus.\n" +
+                "\n" +
+                "Vehicula commodo tempus curabitur eros, lacinia erat vulputate lorem vel fermentum donec, lectus sed conubia\n" +
+                "id pellentesque. Vel senectus donec pede aliquet dolor sit, nec vivamus justo placerat interdum maecenas,\n" +
+                "sodales euismod. Quis netus sapien amet, vestibulum quam nec amet lacinia, quis aliquet, tempor vivamus tellus\n" +
+                "enim, suscipit quis eleifend. Amet class phasellus orci pretium, risus in nulla. Neque sit ullamcorper,\n" +
+                "ultricies platea id nec suspendisse ac. Et elementum. Dictum nam, ut dui fermentum egestas facilisis elit\n" +
+                "augue, adipiscing donec ipsum erat nam pellentesque convallis, vestibulum vestibulum risus id nulla ut mauris,\n" +
+                "curabitur aute aptent. Ultrices orci wisi dui ipsum praesent, pharetra felis eu quis. Est fringilla etiam,\n" +
+                "maxime sem dapibus et eget, mi enim dignissim nec pretium, augue vehicula, volutpat proin. Et occaecati\n" +
+                "lobortis viverra, cum in sed, vivamus tellus. Libero at malesuada est vivamus leo tortor",
+        mode:  "javascript",
       });
+      myCodeMirror.setOption('scrollbarStyle', 'overlay');
     </script>
 
   </body>
